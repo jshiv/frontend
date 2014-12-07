@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5A443778-2530-43EE-BE74-B680B12CAC79</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Stormy</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>9410077E3061BBC0C4BC9F907129F4ED170C7B30</key>
+		<string>https://github.com/jshiv/frontend.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Stormy/Stormy.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>9410077E3061BBC0C4BC9F907129F4ED170C7B30</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jshiv/frontend.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>9410077E3061BBC0C4BC9F907129F4ED170C7B30</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>9410077E3061BBC0C4BC9F907129F4ED170C7B30</string>
+			<key>IDESourceControlWCCName</key>
+			<string>frontend</string>
+		</dict>
+	</array>
+</dict>
+</plist>
