@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var refreshButton: UIButton!
     @IBOutlet weak var refreshActivityIndicator: UIActivityIndicatorView!
     
+    @IBOutlet weak var localLabel: UILabel!
     
     private let apiKey = "a9abbec0e2d9c3ba913becfe326afabc"
     
@@ -34,10 +35,33 @@ class ViewController: UIViewController {
         refreshActivityIndicator.hidden = true
         refreshButton.hidden = false
         getCurrentWeatherData()
+        getLocalJSONData()
         
     }
     
     
+    func getLocalJSONData() -> Void {
+        
+        let localURL = NSURL(string: "http://localhost:8000/images")
+        
+        let localSharedSession = NSURLSession.sharedSession()
+        
+        let localDownloadTask: NSURLSessionDownloadTask = localSharedSession.downloadTaskWithURL(localURL!, completionHandler: { (location:NSURL!, response: NSURLResponse!, error: NSError!) -> Void in
+            
+            if (error == nil){
+                let localDataObject = NSData(contentsOfURL: location)
+                let localData: NSDictionary = NSJSONSerialization.JSONObjectWithData(localDataObject!, options: nil, error: nil) as NSDictionary
+                
+                let message = localData["message"] as String
+                
+                self.localLabel.text = message
+            }
+            
+        })
+        localDownloadTask.resume()
+        
+        
+    }
     
     
     func getCurrentWeatherData() -> Void {
@@ -46,6 +70,8 @@ class ViewController: UIViewController {
         
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
         let forecastURL = NSURL(string: locations["Steamer Lane"]!, relativeToURL: baseURL)
+        
+
         
         let sharedSession = NSURLSession.sharedSession()
         
