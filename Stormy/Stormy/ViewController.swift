@@ -69,7 +69,7 @@ class ViewController: UIViewController {
 
         
         let baseURL = NSURL(string: "https://api.forecast.io/forecast/\(apiKey)/")
-        let forecastURL = NSURL(string: locations["Steamer Lane"]!, relativeToURL: baseURL)
+        let forecastURL = NSURL(string: locations["Christy"]!, relativeToURL: baseURL)
         
 
         
